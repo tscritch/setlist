@@ -1,18 +1,20 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './Pages/Login/Login.display';
 import Home from './Pages/Home/Home.display';
 import AuthCallback from './Pages/AuthCallback/AuthCallback.display';
+import _404 from './Pages/Error/404'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Fragment>
+        <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/login' component={Login} />
           <Route path='/auth/success' component={AuthCallback} />
-        </Fragment>
+          <Route component={_404} />
+        </Switch>
       </Router>
     )
   }
