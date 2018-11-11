@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, Container, Link } from './Login.styles'
+import { Page, Container } from './Home.styles'
 
 export default () => {
   return (
