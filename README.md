@@ -1,4 +1,4 @@
-![logo](http://tadscritchfield.com/images/setlist-logo100px.png)
+![logo](http://tadscritchfield.com/images/setlist-logo.png)
 
 # Setlist
 
