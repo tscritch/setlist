@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](http://tadscritchfield.com/images/setlist-logo100px.png)
 
-## Available Scripts
+# Setlist
 
-In the project directory, you can run:
+##### How to use _Setlist_:
 
-### `npm start`
+Add as many songs as you want _Setlist_ to choose from to the song list. Then choose how many songs you want in your template. Add speed and one tag for each song in the template. Click _create setlist_ and **BOOM!!** Service is planned! Keep clicking _create setlist_ until all your setlists are planned.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### Why I made _Setlist_
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+As a worship leader, I have created short lists of around 20 songs to choose from for the upcoming quarter. It allows the worship team to know the songs more intimately as well as the congregation. However, most of my time spent planning services is spent looking over this list multiple times to find the song that will fit perfectly for that week's service. I have made _Setlist_ to take songs from a list and, using a setlist template, it will create a setlist for the service based on the song's metadata.
 
-### `npm test`
+This Node.js app was created using Express, AngularJS and is served up using Docker on a Linode server.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Docker Cloud: [tscritch/setlist](https://cloud.docker.com/swarm/tscritch/repository/docker/tscritch/setlist/general)
 
-### `npm run build`
+#### ROADMAP
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+*   Integrate Planning Center API
+    *   Search for songs to import
+    *   Export a setlist to a specific plan within Planning Center and on to Proclaim
+*   Autocomplete for already existing tags
+*   Error notifications for non-existing tags
