@@ -29,9 +29,9 @@ export const Button = styled.button`
 `
 
 export const Container = styled.div`
-  height: 300px;
-  width: 400px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.15)
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 `
 
 export const Link = styled.a`
