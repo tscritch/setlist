@@ -17,7 +17,7 @@ export default class AuthCallback extends React.Component {
       method: 'POST',
       body: JSON.stringify(body)
     }
-    fetch('https://setlist.tadscritchfield.com/.netlify/functions/get_token', options).then((res) => res.json()).then((token) => {
+    fetch('https://setlist.tadscritchfield.com/.netlify/functions/get_token', options).then((res) => res).then((token) => {
       console.log(token, '<- token')
       // window.localStorage.setItem('token', JSON.stringify(token))
     }).catch((e) => {
