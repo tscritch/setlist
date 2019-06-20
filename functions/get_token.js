@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
     'https://api.planningcenteronline.com/oauth/token',
     {
       method: 'POST',
-      body: JSON.stringify(event.body)
+      body: event.body
     },
     function (err, response, body) {
       if (err) {
