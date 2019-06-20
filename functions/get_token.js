@@ -13,22 +13,22 @@ exports.handler = function (event, context, callback) {
   //   body: JSON.stringify({ ...event.body })
   // })
   request(
-    'https://api.planningcenteronline.com/oauth/token',
     {
+      url: 'https://api.planningcenteronline.com/oauth/token',
       method: 'POST',
       formData: event.body
     },
     function (err, response, body) {
       console.log(response, '<- response')
-      if (err) {
+      if (!err && response.statusCode === 200) {
         callback(null, {
-          statusCode: 500,
-          body: 'Something went wrong with the api request: ' + err
+          statusCode: 200,
+          body
         })
       }
       callback(null, {
-        statusCode: 200,
-        body
+        statusCode: 500,
+        body: 'Something went wrong with the api request: ' + err
       })
     })
 }
