@@ -1,13 +1,33 @@
+const request = require('request')
+
 exports.handler = function (event, context, callback) {
+  if (event.httpMethod !== 'POST' || !event.body) {
+    callback(null, {
+      statusCode: 500,
+      body: 'Bad Request'
+    })
+  }
   console.log(event.body, '<- body')
-  callback(null, {
-    statusCode: 200,
-    body: { ...event.body }
-  })
-  // fetch('https://api.planningcenteronline.com/oauth/token', options).then((res) => res.json()).then((token) => {
-  //   console.log(token, '<- token')
-  //   window.localStorage.setItem('token', JSON.stringify(token))
-  // }).catch((e) => {
-  //   console.log(e, '<- error')
+  // callback(null, {
+  //   statusCode: 200,
+  //   body: JSON.stringify({ ...event.body })
   // })
+  request(
+    'https://api.planningcenteronline.com/oauth/token',
+    {
+      method: 'POST',
+      body: JSON.stringify(event.body)
+    },
+    function (err, response, body) {
+      if (err) {
+        callback(null, {
+          statusCode: 500,
+          body: 'Something went wrong with the api request: ' + err
+        })
+      }
+      callback(null, {
+        statusCode: 200,
+        body
+      })
+    })
 }
