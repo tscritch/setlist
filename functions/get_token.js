@@ -19,13 +19,14 @@ exports.handler = function (event, context, callback) {
       form: event.body
     },
     function (err, response, body) {
-      console.log(response, '<- response')
+      console.log(body, '<- response body')
       if (!err && response.statusCode === 200) {
         callback(null, {
           statusCode: 200,
           body
         })
       }
+      console.log(err, '<- error')
       callback(null, {
         statusCode: 500,
         body: 'Something went wrong with the api request: ' + err
