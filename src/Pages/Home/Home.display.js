@@ -1,11 +1,17 @@
 import React from 'react'
-import { Page, Container } from './Home.styles'
+import SongList from '../../components/SongList/SongList.display'
+import { Page, Header, Button, Container } from './Home.styles'
 
 export default () => {
   return (
     <Page>
+      <Header>
+        <h2>Setlist</h2>
+        <Button>Generate Setlist</Button>
+      </Header>
       <Container>
-        <h1>Home</h1>
+        <h4>Song Choices</h4>
+        <SongList />
       </Container>
     </Page>
   )

@@ -5,8 +5,8 @@ export default {
     dark: '#1d97c1'
   },
   background: {
-    main: '#ffffe3',
-    dark: '#ffffe3'
+    main: '#ffffff',
+    dark: '#f3f3f3'
   },
   text: {
     main: '#222211',
