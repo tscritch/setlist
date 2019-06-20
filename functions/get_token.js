@@ -1,12 +1,12 @@
 const request = require('request')
 
 exports.handler = function (event, context, callback) {
-  if (event.httpMethod !== 'POST' || !event.body) {
-    callback(null, {
-      statusCode: 500,
-      body: 'Bad Request'
-    })
-  }
+  // if (event.httpMethod !== 'POST' || !event.body) {
+  //   callback(null, {
+  //     statusCode: 500,
+  //     body: 'Bad Request'
+  //   })
+  // }
   console.log(event.body, '<- body')
   // callback(null, {
   //   statusCode: 200,
@@ -16,7 +16,7 @@ exports.handler = function (event, context, callback) {
     {
       url: 'https://api.planningcenteronline.com/oauth/token',
       method: 'POST',
-      form: event.body
+      formData: JSON.parse(event.body)
     },
     function (err, response, body) {
       console.log(body, '<- response body')
