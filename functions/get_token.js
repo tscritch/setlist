@@ -19,6 +19,7 @@ exports.handler = function (event, context, callback) {
       formData: event.body
     },
     function (err, response, body) {
+      console.log(response, '<- response')
       if (err) {
         callback(null, {
           statusCode: 500,
