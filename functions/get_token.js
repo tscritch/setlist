@@ -11,6 +11,7 @@ exports.handler = function (event, context, callback) {
     },
     function (err, response, body) {
       console.log(body, '<- response body')
+      console.log(response.statusCode, '<- response body')
       if (!err && response.statusCode === 200) {
         callback(null, {
           statusCode: 200,
