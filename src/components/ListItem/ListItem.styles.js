@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export const Item = styled.div`
+export const Item = styled.li`
   width: 100%;
   padding: 10px 0px;
   display: flex;
+  background-color: ${p => p.theme.background.main}
 `
 
 export const Title = styled.div`

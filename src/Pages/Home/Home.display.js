@@ -10,7 +10,6 @@ export default () => {
         <Button>Generate Setlist</Button>
       </Header>
       <Container>
-        <h4>Song Choices</h4>
         <SongList />
       </Container>
     </Page>
