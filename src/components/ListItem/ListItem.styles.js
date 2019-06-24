@@ -7,11 +7,11 @@ export const Item = styled.li`
   background-color: ${p => p.theme.background.main}
 `
 
-export const Title = styled.div`
+export const Title = styled.input`
   padding: 0px 10px;
 `
 
-export const Speed = styled.div`
+export const Speed = styled.input`
   padding: 0px 10px;
 `
 

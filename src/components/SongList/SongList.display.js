@@ -11,6 +11,12 @@ export default function SongList () {
     changeSongs([{ title: '', speed: 'slow', tags: [] }, ...songs])
   }
 
+  const updateSong = (index, item) => {
+    const tmp = [...songs]
+    tmp.splice(index, 1, item)
+    changeSongs(tmp)
+  }
+
   const removeSong = (index) => {
     const tmp = [...songs]
     tmp.splice(index, 1)
@@ -18,7 +24,7 @@ export default function SongList () {
   }
 
   const Songs = songs.length > 0 ? songs.map((s, i) => {
-    return <ListItem key={`song-${i}`} item={s} id={i} removeItem={removeSong} />
+    return <ListItem key={`song-${i}`} item={s} id={i} removeItem={removeSong} updateItem={updateSong} />
   }) : []
 
   return (
