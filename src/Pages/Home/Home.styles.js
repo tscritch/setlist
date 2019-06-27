@@ -32,7 +32,17 @@ export const Button = styled.button`
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+`
+
+export const PageLink = styled.h4`
+  display: inline-block;
+  margin-right: 16px;
+  color: ${p => p.enabled ? p.theme.primary.main : p.theme.text.main };
+  text-decoration: ${p => p.enabled ? 'underline' : 'none' };
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
 
 export const Link = styled.a`
@@ -41,6 +51,5 @@ export const Link = styled.a`
   &:hover {
     background-color: ${props => props.theme.primary.dark};
     text-decoration: none;
-
   }
 `
